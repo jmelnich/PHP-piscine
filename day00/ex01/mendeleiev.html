@@ -4,9 +4,14 @@
 	<meta charset="UTF-8">
 	<title>Mendeleiev</title>
 <style>
+.container{
+	margin: 0 auto;
+	width: 90%;
+}
 td{
 	position: relative;
 	line-height: 25px;
+	width: 25px;
 }
 .blue{
 	background: linear-gradient(to bottom, #6EE3FF, #13ACFB);
@@ -38,13 +43,20 @@ td{
 .emerald{
 	background: linear-gradient(to bottom, #89BCAF, #319993);
 }
+.weight{
+	font-size: 12px;
+	font-weight: 100;
+	position: absolute;
+	top: 40px;
+	left: 8px;
+}
 p{
 	text-align: center;
 	font-size: 20px;
 	font-weight: 600;
 }
 span{
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: 100;
 	position: absolute;
 	top: 4px;
@@ -53,153 +65,155 @@ span{
 </style>
 </head>
 <body>
-	<h1>Dimitri Mendeleïev complete periodic table of tde elements</h1>
-	<table style="width:100%">
+	<div class="container">
+	<h1>Dimitri Mendeleïev complete periodic table of the elements</h1>
+	<table style="width:100%" contenteditable="true">
 	<tbody>
 	<tr>
-		<td class="blue"><p>H<span>1</span></p></td>
+		<td class="blue"><p>H<span class="weight">1.008</span><span>1</span></p></td>
 		<td class="blank" colspan="16"></td>
-		<td class="purple"><p>He<span>2</span></p></td>
+		<td class="purple"><p>He<span class="weight">4.0026</span><span>2</span></p></td>
 	</tr>
 	<tr>
-		<td class="pink"><p>Li<span>3</span></p></td>
-		<td class="scarlet"><p>Be<span>4</span></p></td>
+		<td class="pink"><p>Li<span class="weight">6.94</span><span>3</span></p></td>
+		<td class="scarlet"><p>Be<span class="weight">9.01218</span><span>4</span></p></td>
 		<td class="blank" colspan="10"></td>
-		<td class="turquoise"><p>B<span>5</span></p></td>
-		<td class="blue"><p>C<span>6</span></p></td>
-		<td class="navy"><p>N<span>7</span></p></td>
-		<td class="navy"><p>O<span>8</span></p></td>
-		<td class="navy"><p>F<span>9</span></p></td>
-		<td class="purple"><p>Ne<span>10</span></p></td>
+		<td class="turquoise"><p>B<span class="weight">10.81</span><span>5</span></p></td>
+		<td class="blue"><p>C<span class="weight">12.011</span><span>6</span></p></td>
+		<td class="navy"><p>N<span class="weight">14.007</span><span>7</span></p></td>
+		<td class="navy"><p>O<span class="weight">15.999</span><span>8</span></p></td>
+		<td class="navy"><p>F<span class="weight">18.9984</span><span>9</span></p></td>
+		<td class="purple"><p>Ne<span class="weight">20.1797</span><span>10</span></p></td>
 	</tr>
 	<tr>
-		<td class="pink"><p>Na<span>11</span></p></td>
-		<td class="scarlet"><p>Mg<span>12</span></p></td>
+		<td class="pink"><p>Na<span class="weight">22.9897</span><span>11</span></p></td>
+		<td class="scarlet"><p>Mg<span class="weight">24.305</span><span>12</span></p></td>
 		<td class="blank" colspan="10"></td>
-		<td class="green"><p>Al<span>13</span></p></td>
-		<td class="turquoise"><p>Si<span>14</span></p></td>
-		<td class="blue"><p>P<span>15</span></p></td>
-		<td class="blue"><p>St<span>16</span></p></td>
-		<td class="navy"><p>Cl<span>17</span></p></td>
-		<td class="purple"><p>Ar<span>18</span></p></td>
+		<td class="green"><p>Al<span class="weight">26.9815</span><span>13</span></p></td>
+		<td class="turquoise"><p>Si<span class="weight">28.085</span><span>14</span></p></td>
+		<td class="blue"><p>P<span class="weight">30.9737</span><span>15</span></p></td>
+		<td class="blue"><p>St<span class="weight">32.06</span><span>16</span></p></td>
+		<td class="navy"><p>Cl<span class="weight">35.45</span><span>17</span></p></td>
+		<td class="purple"><p>Ar<span class="weight">39.948</span><span>18</span></p></td>
 	</tr>
 	<tr>
-		<td class="pink"><p>K<span>19</span></p></td>
-		<td class="scarlet"><p>Ca<span>20</span></p></td>
-		<td class="yellow"><p>Sc<span>21</span></p></td>
-		<td class="yellow"><p>Ti<span>22</span></p></td>
-		<td class="yellow"><p>V<span>23</span></p></td>
-		<td class="yellow"><p>Cr<span>24</span></p></td>
-		<td class="yellow"><p>Mn<span>25</span></p></td>
-		<td class="yellow"><p>Fe<span>26</span></p></td>
-		<td class="yellow"><p>Co<span>27</span></p></td>
-		<td class="yellow"><p>Ni<span>28</span></p></td>
-		<td class="yellow"><p>Cu<span>29</span></p></td>
-		<td class="yellow"><p>Zn<span>30</span></p></td>
-		<td class="green"><p>Ga<span>31</span></p></td>
-		<td class="turquoise"><p>Ge<span>32</span></p></td>
-		<td class="turquoise"><p>As<span>33</span></p></td>
-		<td class="blue"><p>Se<span>34</span></p></td>
-		<td class="navy"><p>Br<span>35</span></p></td>
-		<td class="purple"><p>Kr<span>36</span></p></td>
+		<td class="pink"><p>K<span class="weight">39.0983</span><span>19</span></p></td>
+		<td class="scarlet"><p>Ca<span class="weight">40.078</span><span>20</span></p></td>
+		<td class="yellow"><p>Sc<span class="weight">44.9559</span><span>21</span></p></td>
+		<td class="yellow"><p>Ti<span class="weight">47.867</span><span>22</span></p></td>
+		<td class="yellow"><p>V<span class="weight">50.9415</span><span>23</span></p></td>
+		<td class="yellow"><p>Cr<span class="weight">51.9961</span><span>24</span></p></td>
+		<td class="yellow"><p>Mn<span class="weight">54.9380</span><span>25</span></p></td>
+		<td class="yellow"><p>Fe<span class="weight">55.845</span><span>26</span></p></td>
+		<td class="yellow"><p>Co<span class="weight">58.9331</span><span>27</span></p></td>
+		<td class="yellow"><p>Ni<span class="weight">58.6934</span><span>28</span></p></td>
+		<td class="yellow"><p>Cu<span class="weight">63.546</span><span>29</span></p></td>
+		<td class="yellow"><p>Zn<span class="weight">65.38</span><span>30</span></p></td>
+		<td class="green"><p>Ga<span class="weight">69.723</span><span>31</span></p></td>
+		<td class="turquoise"><p>Ge<span class="weight">72.63</span><span>32</span></p></td>
+		<td class="turquoise"><p>As<span class="weight">74.9216</span><span>33</span></p></td>
+		<td class="blue"><p>Se<span class="weight">78.96</span><span>34</span></p></td>
+		<td class="navy"><p>Br<span class="weight">79.904</span><span>35</span></p></td>
+		<td class="purple"><p>Kr<span class="weight">83.798</span><span>36</span></p></td>
 	</tr>
 	<tr>
-		<td class="pink"><p>Rb<span>37</span></p></td>
-		<td class="scarlet"><p>Sr<span>38</span></p></td>
-		<td class="yellow"><p>Y<span>39</span></p></td>
-		<td class="yellow"><p>Zh<span>40</span></p></td>
-		<td class="yellow"><p>Nb<span>41</span></p></td>
-		<td class="yellow"><p>Mo<span>42</span></p></td>
-		<td class="yellow"><p>Tc<span>43</span></p></td>
-		<td class="yellow"><p>Ru<span>44</span></p></td>
-		<td class="yellow"><p>Rh<span>45</span></p></td>
-		<td class="yellow"><p>Rd<span>46</span></p></td>
-		<td class="yellow"><p>Ag<span>47</span></p></td>
-		<td class="yellow"><p>Cd<span>48</span></p></td>
-		<td class="green"><p>In<span>49</span></p></td>
-		<td class="green"><p>Sn<span>50</span></p></td>
-		<td class="turquoise"><p>Sb<span>51</span></p></td>
-		<td class="turquoise"><p>Te<span>52</span></p></td>
-		<td class="navy"><p>I<span>53</span></p></td>
-		<td class="purple"><p>Xe<span>54</span></p></td>
+		<td class="pink"><p>Rb<span class="weight">85.4678</span><span>37</span></p></td>
+		<td class="scarlet"><p>Sr<span class="weight">87.62</span><span>38</span></p></td>
+		<td class="yellow"><p>Y<span class="weight">88.9058</span><span>39</span></p></td>
+		<td class="yellow"><p>Zh<span class="weight">91.224</span><span>40</span></p></td>
+		<td class="yellow"><p>Nb<span class="weight">92.9063</span><span>41</span></p></td>
+		<td class="yellow"><p>Mo<span class="weight">95.96</span><span>42</span></p></td>
+		<td class="yellow"><p>Tc<span class="weight">(98)</span><span>43</span></p></td>
+		<td class="yellow"><p>Ru<span class="weight">101.07</span><span>44</span></p></td>
+		<td class="yellow"><p>Rh<span class="weight">102.905</span><span>45</span></p></td>
+		<td class="yellow"><p>Rd<span class="weight">106.42</span><span>46</span></p></td>
+		<td class="yellow"><p>Ag<span class="weight">107.868</span><span>47</span></p></td>
+		<td class="yellow"><p>Cd<span class="weight">112.411</span><span>48</span></p></td>
+		<td class="green"><p>In<span class="weight">114.818</span><span>49</span></p></td>
+		<td class="green"><p>Sn<span class="weight">118.71</span><span>50</span></p></td>
+		<td class="turquoise"><p>Sb<span class="weight">121.76</span><span>51</span></p></td>
+		<td class="turquoise"><p>Te<span class="weight">127.6</span><span>52</span></p></td>
+		<td class="navy"><p>I<span class="weight">126.904</span><span>53</span></p></td>
+		<td class="purple"><p>Xe<span class="weight">131.293</span><span>54</span></p></td>
 	</tr>
 	<tr>
-		<td class="pink"><p>Cs<span>55</span></p></td>
-		<td class="scarlet"><p>Ba<span>56</span></p></td>
-		<td class="yellow"><p>La<span>57</span></p></td>
-		<td class="yellow"><p>Hf<span>72</span></p></td>
-		<td class="yellow"><p>Ta<span>73</span></p></td>
-		<td class="yellow"><p>W<span>74</span></p></td>
-		<td class="yellow"><p>Re<span>75</span></p></td>
-		<td class="yellow"><p>Os<span>76</span></p></td>
-		<td class="yellow"><p>Ir<span>77</span></p></td>
-		<td class="yellow"><p>Rt<span>78</span></p></td>
-		<td class="yellow"><p>Au<span>79</span></p></td>
-		<td class="yellow"><p>Hg<span>80</span></p></td>
-		<td class="green"><p>Tl<span>81</span></p></td>
-		<td class="green"><p>Pb<span>82</span></p></td>
-		<td class="green"><p>Bi<span>83</span></p></td>
-		<td class="turquoise"><p>Po<span>84</span></p></td>
-		<td class="navy"><p>At<span>85</span></p></td>
-		<td class="purple"><p>Rn<span>86</span></p></td>
+		<td class="pink"><p>Cs<span class="weight">132.905</span><span>55</span></p></td>
+		<td class="scarlet"><p>Ba<span class="weight">137.327</span><span>56</span></p></td>
+		<td class="yellow"><p>La<span class="weight">138.90547</span><span>57</span></p></td>
+		<td class="yellow"><p>Hf<span class="weight">178.49</span><span>72</span></p></td>
+		<td class="yellow"><p>Ta<span class="weight">180.947</span><span>73</span></p></td>
+		<td class="yellow"><p>W<span class="weight">183.84</span><span>74</span></p></td>
+		<td class="yellow"><p>Re<span class="weight">186.207</span><span>75</span></p></td>
+		<td class="yellow"><p>Os<span class="weight">190.23</span><span>76</span></p></td>
+		<td class="yellow"><p>Ir<span class="weight">192.217</span><span>77</span></p></td>
+		<td class="yellow"><p>Pt<span class="weight">195.084</span><span>78</span></p></td>
+		<td class="yellow"><p>Au<span class="weight">196.966</span><span>79</span></p></td>
+		<td class="yellow"><p>Hg<span class="weight">200.59</span><span>80</span></p></td>
+		<td class="green"><p>Tl<span class="weight">204.38</span><span>81</span></p></td>
+		<td class="green"><p>Pb<span class="weight">207.2</span><span>82</span></p></td>
+		<td class="green"><p>Bi<span class="weight">208.9804</span><span>83</span></p></td>
+		<td class="turquoise"><p>Po<span class="weight">(209)</span><span>84</span></p></td>
+		<td class="navy"><p>At<span class="weight">(210)</span><span>85</span></p></td>
+		<td class="purple"><p>Rn<span class="weight">(222)</span><span>86</span></p></td>
 	</tr>
 	<tr>
-		<td class="pink"><p>Fr<span>87</span></p></td>
-		<td class="scarlet"><p>Ra<span>88</span></p></td>
-		<td class="yellow"><p>Ac<span>89</span></p></td>
-		<td class="yellow"><p>Rf<span>104</span></p></td>
-		<td class="yellow"><p>Db<span>105</span></p></td>
-		<td class="yellow"><p>Sg<span>106</span></p></td>
-		<td class="yellow"><p>Bh<span>107</span></p></td>
-		<td class="yellow"><p>Hs<span>108</span></p></td>
-		<td class="yellow"><p>Mt<span>109</span></p></td>
-		<td class="yellow"><p>Ds<span>110</span></p></td>
-		<td class="yellow"><p>Rg<span>111</span></p></td>
-		<td class="yellow"><p>Cn<span>112</span></p></td>
-		<td class="green"><p>Nh<span>113</span></p></td>
-		<td class="green"><p>Fl<span>114</span></p></td>
-		<td class="green"><p>Mc<span>115</span></p></td>
-		<td class="green"><p>Lv<span>116</span></p></td>
-		<td class="navy"><p>Ts<span>117</span></p></td>
-		<td class="purple"><p>Og<span>118</span></p></td>
+		<td class="pink"><p>Fr<span class="weight">(223)</span><span>87</span></p></td>
+		<td class="scarlet"><p>Ra<span class="weight">(226)</span><span>88</span></p></td>
+		<td class="yellow"><p>Ac<span class="weight">(227)</span><span>89</span></p></td>
+		<td class="yellow"><p>Rf<span class="weight">(267)</span><span>104</span></p></td>
+		<td class="yellow"><p>Db<span class="weight">(268)</span><span>105</span></p></td>
+		<td class="yellow"><p>Sg<span class="weight">(269)</span><span>106</span></p></td>
+		<td class="yellow"><p>Bh<span class="weight">(270)</span><span>107</span></p></td>
+		<td class="yellow"><p>Hs<span class="weight">(277)</span><span>108</span></p></td>
+		<td class="yellow"><p>Mt<span class="weight">(278)</span><span>109</span></p></td>
+		<td class="yellow"><p>Ds<span class="weight">(281)</span><span>110</span></p></td>
+		<td class="yellow"><p>Rg<span class="weight">(282)</span><span>111</span></p></td>
+		<td class="yellow"><p>Cn<span class="weight">(285)</span><span>112</span></p></td>
+		<td class="green"><p>Nh<span class="weight">(286)</span><span>113</span></p></td>
+		<td class="green"><p>Fl<span class="weight">(289)</span><span>114</span></p></td>
+		<td class="green"><p>Mc<span class="weight">(290)</span><span>115</span></p></td>
+		<td class="green"><p>Lv<span class="weight">(293)</span><span>116</span></p></td>
+		<td class="navy"><p>Ts<span class="weight">(294)</span><span>117</span></p></td>
+		<td class="purple"><p>Og<span class="weight">(294)</span><span>118</span></p></td>
 	</tr>
 	<tr style="height: 25px;"> <!-- Mimic the margin -->
 	</tr>
 	<tr class="super">
 		<td class="blank" colspan="3"></td>
-		<td class="lime"><p>Ce<span>58</span></p></td>
-		<td class="lime"><p>Pr<span>59</span></p></td>
-		<td class="lime"><p>Nd<span>60</span></p></td>
-		<td class="lime"><p>Pm<span>61</span></p></td>
-		<td class="lime"><p>Sm<span>62</span></p></td>
-		<td class="lime"><p>Eu<span>63</span></p></td>
-		<td class="lime"><p>Gd<span>64</span></p></td>
-		<td class="lime"><p>Tb<span>65</span></p></td>
-		<td class="lime"><p>Dy<span>66</span></p></td>
-		<td class="lime"><p>Ho<span>67</span></p></td>
-		<td class="lime"><p>Er<span>68</span></p></td>
-		<td class="lime"><p>Tm<span>69</span></p></td>
-		<td class="lime"><p>Yb<span>70</span></p></td>
-		<td class="lime"><p>Lu<span>71</span></p></td>
+		<td class="lime"><p>Ce<span class="weight">140.116</span><span>58</span></p></td>
+		<td class="lime"><p>Pr<span class="weight">140.90766</span><span>59</span></p></td>
+		<td class="lime"><p>Nd<span class="weight">144.242</span><span>60</span></p></td>
+		<td class="lime"><p>Pm<span class="weight">(145)</span><span>61</span></p></td>
+		<td class="lime"><p>Sm<span class="weight">150.36</span><span>62</span></p></td>
+		<td class="lime"><p>Eu<span class="weight">151.964</span><span>63</span></p></td>
+		<td class="lime"><p>Gd<span class="weight">157.25</span><span>64</span></p></td>
+		<td class="lime"><p>Tb<span class="weight">158.92535</span><span>65</span></p></td>
+		<td class="lime"><p>Dy<span class="weight">162.500</span><span>66</span></p></td>
+		<td class="lime"><p>Ho<span class="weight">164.93033</span><span>67</span></p></td>
+		<td class="lime"><p>Er<span class="weight">167.259</span><span>68</span></p></td>
+		<td class="lime"><p>Tm<span class="weight">168.93422</span><span>69</span></p></td>
+		<td class="lime"><p>Yb<span class="weight">173.045</span><span>70</span></p></td>
+		<td class="lime"><p>Lu<span class="weight">174.9668</span><span>71</span></p></td>
 	</tr>
 	<tr>
 		<td class="blank" colspan="3"></td>
-		<td class="emerald"><p>Th<span>90</span></p></td>
-		<td class="emerald"><p>Pa<span>91</span></p></td>
-		<td class="emerald"><p>U<span>92</span></p></td>
-		<td class="emerald"><p>Np<span>93</span></p></td>
-		<td class="emerald"><p>Pu<span>94</span></p></td>
-		<td class="emerald"><p>Am<span>95</span></p></td>
-		<td class="emerald"><p>Cm<span>96</span></p></td>
-		<td class="emerald"><p>Bk<span>97</span></p></td>
-		<td class="emerald"><p>Cf<span>98</span></p></td>
-		<td class="emerald"><p>Es<span>99</span></p></td>
-		<td class="emerald"><p>Fm<span>100</span></p></td>
-		<td class="emerald"><p>Md<span>101</span></p></td>
-		<td class="emerald"><p>No<span>102</span></p></td>
-		<td class="emerald"><p>Lr<span>103</span></p></td>
+		<td class="emerald"><p>Th<span class="weight">232.0377</span><span>90</span></p></td>
+		<td class="emerald"><p>Pa<span class="weight">231.03588</span><span>91</span></p></td>
+		<td class="emerald"><p>U<span class="weight">238.02891</span><span>92</span></p></td>
+		<td class="emerald"><p>Np<span class="weight">(237)</span><span>93</span></p></td>
+		<td class="emerald"><p>Pu<span class="weight">(244)</span><span>94</span></p></td>
+		<td class="emerald"><p>Am<span class="weight">(243)</span><span>95</span></p></td>
+		<td class="emerald"><p>Cm<span class="weight">(247)</span><span>96</span></p></td>
+		<td class="emerald"><p>Bk<span class="weight">(247)</span><span>97</span></p></td>
+		<td class="emerald"><p>Cf<span class="weight">(251)</span><span>98</span></p></td>
+		<td class="emerald"><p>Es<span class="weight">(252)</span><span>99</span></p></td>
+		<td class="emerald"><p>Fm<span class="weight">(257)</span><span>100</span></p></td>
+		<td class="emerald"><p>Md<span class="weight">(258)</span><span>101</span></p></td>
+		<td class="emerald"><p>No<span class="weight">(259)</span><span>102</span></p></td>
+		<td class="emerald"><p>Lr<span class="weight">(266)</span><span>103</span></p></td>
 	</tr>
 	</tbody>
 	</table>
+</div>
 </body>
 </html>
