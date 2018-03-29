@@ -1,0 +1,154 @@
+/* header */
+body{
+	background-color: #505050;
+}
+
+.container{
+	margin: 0 auto;
+	width: 90%;
+}
+
+header{
+	position: relative;
+	background-color: #909090;
+	height: 100%;
+	padding: 10px 0;
+	margin-bottom: 25px;
+}
+
+.title{
+	width: 700px;
+}
+
+.shadow{
+	-moz-box-shadow: 10px 10px 10px 0px #000;
+	-webkit-box-shadow: 10px 10px 10px 0px #000;
+	-o-box-shadow: 10px 10px 10px 0px #000;
+   box-shadow: 10px 10px 10px 0px #000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.reload, .close{
+  	width: 17px;
+  	margin: 10px;
+}
+
+.reload{
+    float: right;
+}
+
+.close{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.magnifier{
+	position: absolute;
+	bottom: -20px;
+	right: 35px;
+}
+/* main */
+.wrapper{
+	position: relative;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.container-left, .container-right{
+	box-sizing: border-box;
+	background-color: #909090;
+	height: 400px;
+	padding: 10px 0;
+}
+
+.container-left, .container-right{
+	width: 10%;
+}
+
+.container-middle{
+	background-color: #909090;
+	width: 76%;
+	margin: 0 2%;
+	height: 570px;
+	float: left;
+}
+
+.container-left{
+	float: left;
+}
+
+.container-right{
+	float: right;
+}
+
+.container-middle>img{
+	box-sizing: border-box;
+	margin: 0 auto;
+	display: block;
+	padding: 10px;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.container-left>img{
+	width: 60px;
+	display: block;
+	margin: 10px auto;
+}
+
+.container-right>img{
+	width: 60px;
+	display: block;
+	margin: 10px auto;
+}
+
+.brick{
+	background: repeat url('resources/brick.jpg');
+	width: 100px;
+	height: 60px;
+	margin: 10px auto;
+}
+
+.clearfix{
+	clear: both;
+}
+
+.form{
+	position: absolute;
+	width: 510px;
+	height: 170px;
+	top: 480px;
+	left: -52px;
+	padding-left: 10px;
+	background-color: #88FF89;
+	font-family: Times;
+}
+
+.bigger{
+	font-size: 37px;
+}
+
+.red{
+	text-shadow: 2px 5px 5px rgba(255, 77, 49, 1);
+}
+
+form{
+	padding-top: 2px;
+}
+input{
+	width: 380px;
+	height: 18px;
+}
+
+.btn{
+    font-size: 13px;
+    height: 18px;
+    padding-bottom: 20px;
+    padding-top: 1px;
+    width: 80px;
+	background: #f5f7f6;
+	border: 1px solid #A8A4A5;
+}
