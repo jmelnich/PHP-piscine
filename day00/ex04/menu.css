@@ -1,0 +1,28 @@
+body{
+	color: white;
+	background: rgb(2, 179, 228) repeating-linear-gradient(to right, rgba(0, 126, 172, 0.4), rgba(0, 126, 172, 0.2) 15px, transparent 4px, transparent 8px) repeat scroll 0 0;
+}
+
+ul{
+	font-size: 25px;
+	font-family: monospace;
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+}
+
+nav{
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+li{
+	display: block;
+	padding: 1% 10%;
+	border-left: 1px solid white;
+}
+
+
+ul li:first-child {
+  border-left: none;
+}
+

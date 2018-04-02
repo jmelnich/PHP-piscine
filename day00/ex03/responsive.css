@@ -1,0 +1,157 @@
+.container{
+	margin: 0 auto;
+	width: 80%;
+}
+table{
+	width: 100%;
+}
+td{
+	position: relative;
+	height: 80px;
+	width: calc(100% / 18);
+}
+img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+.blue{
+	background: linear-gradient(to bottom, #6EE3FF, #13ACFB);
+}
+.pink{
+	background: linear-gradient(to bottom, #FD7FB2, #F03F7F);
+}
+.scarlet{
+	background: linear-gradient(to bottom, #FF9784, #FD5125);
+}
+.yellow{
+	background: linear-gradient(to bottom, #FFE33B, #FCA914);
+}
+.green{
+	background: linear-gradient(to bottom, #6DF3A2, #10C648);
+}
+.turquoise{
+	background: linear-gradient(to bottom, #52F9D9, #0FDDAF);
+}
+.navy{
+	background: linear-gradient(to bottom, #AEC3FC, #6E6DFB);
+}
+.purple{
+	background: linear-gradient(to bottom, #D19FF7, #AC48FB);
+}
+.lime{
+	background: linear-gradient(to bottom, #83F677, #4EC717);
+}
+.emerald{
+	background: linear-gradient(to bottom, #89BCAF, #319993);
+}
+.weight{
+	padding: 4px;
+	display: block;
+	font-size: 12px;
+	font-weight: 100;
+	text-align: right;
+}
+p{
+	padding: 10px;
+	margin: 0;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+}
+.num{
+	padding: 4px;
+	font-size: 11px;
+	font-weight: 100;
+	text-align: left;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1200px){
+	.container{
+		width: 99%;
+	}
+	td{
+		height: 50px;
+	}
+	.weight{
+		font-size: 10px;
+	}
+	p{
+		font-size: 16px;
+	}
+	.num{
+		font-size: 8px;
+	}
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1023px){
+	.container{
+		width: 99%;
+	}
+	td{
+		height: 40px;
+	}
+	.weight{
+		font-size: 9px;
+	}
+	p{
+		font-size: 14px;
+	}
+	.num{
+		font-size: 7px;
+	}
+}
+
+@media only screen and (min-width: 798px) and (max-width: 967px){
+	.container{
+		width: 99%;
+	}
+	td{
+		height: 30px;
+	}
+	.weight{
+		font-size: 7px;
+	}
+	p{
+		font-size: 8px;
+	}
+	.num{
+		font-size: 6px;
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 797px){
+	.container{
+		width: 99%;
+	}
+	td{
+		height: 20px;
+	}
+	.weight{
+		font-size: 5px;
+	}
+	p{
+		font-size: 5px;
+	}
+	.num{
+		font-size: 6px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container{
+		width: 70%;
+	}
+  td {
+  	width: 100%;
+    border-bottom: 1px solid white;
+    display: block;
+  }
+  .num{
+		position: relative;
+		top: -3px;
+	}
+	h1{
+		font-size: 20px;
+	}
+}

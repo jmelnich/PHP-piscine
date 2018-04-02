@@ -1,38 +1,39 @@
 /* header */
 body{
 	background-color: #505050;
+	font-family: Arial;
 }
 
 .container{
 	margin: 0 auto;
-	width: 90%;
+	width: 1420px;
 }
 
 header{
 	position: relative;
 	background-color: #909090;
-	height: 100%;
-	padding: 10px 0;
-	margin-bottom: 25px;
+	height: 115px;
+	padding: 10px;
+	margin-bottom: 20px;
 }
 
 .title{
-	width: 700px;
+	padding-left: 5px;
 }
 
 .shadow{
 	-moz-box-shadow: 10px 10px 10px 0px #000;
 	-webkit-box-shadow: 10px 10px 10px 0px #000;
 	-o-box-shadow: 10px 10px 10px 0px #000;
-   box-shadow: 10px 10px 10px 0px #000;
+	box-shadow: 10px 10px 10px 0px #000;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 }
 
 .reload, .close{
-  	width: 17px;
-  	margin: 10px;
+  	width: 19px;
+  	margin: 3px 1px 0 0;
 }
 
 .reload{
@@ -40,6 +41,7 @@ header{
 }
 
 .close{
+	margin: 3px 10px 10px 0;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -48,31 +50,31 @@ header{
 .magnifier{
 	position: absolute;
 	bottom: -20px;
-	right: 35px;
+	right: 33px;
 }
 /* main */
 .wrapper{
 	position: relative;
-	width: 95%;
+	width: 1360px;
 	margin: 0 auto;
 }
 
 .container-left, .container-right{
 	box-sizing: border-box;
 	background-color: #909090;
-	height: 400px;
+	height: 420px;
 	padding: 10px 0;
 }
 
 .container-left, .container-right{
-	width: 10%;
+	width: 140px;
 }
 
 .container-middle{
 	background-color: #909090;
-	width: 76%;
-	margin: 0 2%;
-	height: 570px;
+	width: 1025px;
+	margin: 0 25px;
+	height: 580px;
 	float: left;
 }
 
@@ -89,45 +91,58 @@ header{
 	margin: 0 auto;
 	display: block;
 	padding: 10px;
-	max-width: 100%;
+	width: 1020px;
 	max-height: 100%;
 }
 
 .container-left>img{
-	width: 60px;
+	width: 68px;
 	display: block;
 	margin: 10px auto;
 }
 
 .container-right>img{
-	width: 60px;
+	width: 68px;
 	display: block;
 	margin: 10px auto;
 }
 
+.border_img{
+	border: 5px solid red;
+	border-radius: 5px;
+}
+
 .brick{
 	background: repeat url('resources/brick.jpg');
-	width: 100px;
-	height: 60px;
-	margin: 10px auto;
+	width: 120px;
+	height: 70px;
+	margin: 2px auto;
 }
 
 .clearfix{
 	clear: both;
 }
 
+/*form */
 .form{
+	font-size: 17px;
 	position: absolute;
 	width: 510px;
 	height: 170px;
-	top: 480px;
-	left: -52px;
+	top: 500px;
+	left: -72px;
 	padding-left: 10px;
 	background-color: #88FF89;
-	font-family: Times;
+}
+
+.form>p{
+	line-height: 120%;
+	margin-bottom: -3px;
 }
 
 .bigger{
+	font-family: Times;
+	letter-spacing: 1px;
 	font-size: 37px;
 }
 
@@ -141,6 +156,9 @@ form{
 input{
 	width: 380px;
 	height: 18px;
+	border: none;
+	border-top: 2px solid #A9A9A9;
+	border-left: 2px solid #A9A9A9;
 }
 
 .btn{
