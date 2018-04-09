@@ -1,0 +1,22 @@
+install.php - инициализация сайта, создает админов
+
+#Basically, HTML:
+index.php
+header.php
+main_page.php
+footer.php
+
+# Users
+create.php // для сайн ап, создает юзеров
+hello.php
+login.php // для логина юзеров. использует auth для чека
+auth.php // check users when they login
+logout.php //вылогинивает юзеров
+
+# Admins
+admin.php - вход для админов
+admin_auth.php - проверка админов
+admin_page.php - аналог хеллоу как у юзеров
+addproduct.php - логика добавления товаров, к admin_page.php
+basket.php !!!!!!!!!!!!!!
+
