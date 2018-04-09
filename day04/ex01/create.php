@@ -14,7 +14,7 @@
 	{
 		$data = unserialize(file_get_contents("../private/passwd"));
 		foreach ($data as $key => $pr) {
-			if ($pr["user"] === $_POST['login']) {
+			if($pr["user"] === $_POST['login']){
 				echo "ERROR\n";
 				exit();
 			}
