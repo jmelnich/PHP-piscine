@@ -32,10 +32,10 @@ $aemon = new MaesterAemon();
 $sam = new SamwellTarly();
 $nw = new NightsWatch();
 
-//$nw->recruit($jon);
+$nw->recruit($jon);
 //$nw->recruit($aemon);
 //$nw->recruit($sam);
 
-//$nw->fight();
+$nw->fight();
 
 ?>
