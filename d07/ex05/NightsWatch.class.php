@@ -1,13 +1,14 @@
 <?php
 class NightsWatch{
+	private $array = array();
 	public function recruit($person){
-	$array = new array();
-		if(get_class($person) === 'IFighter'){
-			$array[] = $person;
+		if(is_subclass_of($person, 'IFighter')){
+			$this->$array[] = $person;
 		}
-	}	
+	}
+	
 	public function fight(){
-		foreach ($array as $person) {
+		foreach ($this->$array as $person) {
 			$person->fight();
 		}
 	}
