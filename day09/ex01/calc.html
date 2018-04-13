@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<style>
+		.container{
+			margin: 0 auto;
+		}
+		.calc{
+			margin: 0 auto;
+			width: 500px;
+		}
+		input[type="text"]{
+			width: 28px;
+		}
+		input, select, span{
+			margin: 0 4px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="calc">
+			<h1>Super calculator</h1>
+			<input type="text" name="first">
+			<select id="op">
+				<option value="plus">+</option>
+				<option value="deduct">-</option>
+				<option value="multiply">*</option>
+				<option value="divide">/</option>
+				<option value="modulo">%</option>
+			</select>
+			<input type="text" name="second">
+			<input type="submit" name="submit" value="Try me!">
+		</div>
+	</div>
+<script type="text/javascript">
+	window.setTimeout(function () {
+	 	alert("Please, use me...");
+	}, 30000)
+	let first = document.getElementsByName("first")[0];
+	let second = document.getElementsByName("second")[0];
+	let submit = document.getElementsByName("submit")[0];
+	submit.addEventListener("click", result);
+	function isInt(n) {
+	   return n % 1 === 0;
+	}
+	function result() {
+		let f_val = Number(first.value);
+		let s_val = Number(second.value);
+		let select = document.getElementById("op"),
+	    selectedNode = select.options[select.selectedIndex].value;
+	    if (f_val >= 0 && s_val >= 0 && isInt(f_val) && isInt(s_val)){
+			let result;
+	    	switch(selectedNode) {
+			    case "plus":
+			        result = f_val + s_val;
+			        alert(result);
+					console.log(result);
+			        break;
+			    case "deduct":
+			        result = f_val - s_val;
+			        alert(result);
+					console.log(result);
+			        break;
+		        case "multiply":
+		        	result = f_val * s_val;
+		        	alert(result);
+					console.log(result);
+		        	break;
+		        case "divide":
+		        	if (s_val === 0){
+		        		alert("It’s over 9000!");
+		        		console.log("It’s over 9000!");
+		        		break;
+		        	} else {
+		        		result = f_val / s_val;
+		        		alert(result);
+						console.log(result);
+		        	}
+		        	break;
+		        case "modulo":
+		        	if (s_val === 0){
+		        		alert("It’s over 9000!");
+		        		console.log("It’s over 9000!");
+		        		break;
+		        	} else {
+		        		result = f_val % s_val;
+		        		alert(result);
+						console.log(result);
+		        	}
+		        	break;
+			    default:
+			        operation = false;
+			}
+		
+		} else {
+			alert("Error  :(");
+			console.log("Error  :(");
+		}
+	}
+</script>
+</body>
+</html>
