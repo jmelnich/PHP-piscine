@@ -1,9 +1,41 @@
 function openModal() {
     let todo = prompt("Please enter your new TODO", "");
-    if (todo != null) {
+    if ((todo.trim()) != "") {
         addTask(todo);
     }
 }
+	function setCookie(cname, cvalue, exdays) {
+	    var d = new Date();
+	    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	    var expires = "expires="+ d.toUTCString();
+	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function getCookie(cname) {
+	    var name = cname + "=";
+	    var decodedCookie = decodeURIComponent(document.cookie);
+	    var ca = decodedCookie.split(';');
+	    for(var i = 0; i <ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) == ' ') {
+	            c = c.substring(1);
+	        }
+	        if (c.indexOf(name) == 0) {
+	            return c.substring(name.length, c.length);
+	        }
+	    }
+	    return "";
+	}
+
+	window.onload = function () {
+		if (getCookie("todo") != ""){
+			data.tasks = JSON.parse(getCookie("todo"));
+			data.id = data.tasks.length;
+			view.render();
+		}	
+	} 
+
+ //TODO change arr length!
 	const data = {
 		tasks: [],
 		id: 0
@@ -15,6 +47,7 @@ function openModal() {
 			text
 		});
 		view.render();
+		setCookie("todo", JSON.stringify(data.tasks), 1);
 	}
 
 	let model = {
@@ -22,77 +55,38 @@ function openModal() {
 			let activeTasks = data.tasks;
 			return activeTasks;
 		},
+		removeTask: function(id){
+			if (confirm("Do you really want to delete this task?"))
+			{
+				let elem = data.tasks.map(obj => obj.uid == id);
+				let posInArr = elem.indexOf(true);
+				data.tasks.splice(posInArr, 1);
+				setCookie("todo", JSON.stringify(data.tasks), 1);
+				view.render();
+			}
+		},
 	}
 
 	let view = {
 		render: function() {
-			//this.taskList = $('.task-list');
 			let list = document.getElementById("ft_list");
-			let taskList = list.querySelector(".task-list");
-			console.log(taskList);
-			//taskList.innerHTML(''); clean list
-			//this.taskTemplate = $('script[data-template="tasks"]').html(); //target it somehow
 			if (data.tasks){
+				let taskList = list.querySelector(".task-list");
+				taskList.innerHTML = "";
 				model.getActiveTask().map(function(task){
-					let thisTemplate = taskTemplate.replace(/{{text}}/g, task.text)
+					let taskTemplate = document.querySelector("#template").innerHTML;
+					taskTemplate = taskTemplate.replace(/{{text}}/g, task.text)
 													.replace(/{{id}}/g, task.uid);
-					taskList.append(thisTemplate);
+				let elem = document.createElement("li");
+				elem.className = "task";
+				elem.id = task.uid;
+				elem.setAttribute('onclick', 'model.removeTask(this.id)');
+				elem.innerHTML = taskTemplate;
+				taskList.append(elem);
 				});
 			}
 		}
 	};
 	
 
-
-	// let octopus = {
-	// 	//addTask function that push new obj to model push it as an object
-	// 	addTask: function(text) {
-	// 		data.tasks.push({
-	// 			uid: data.id++,
-	// 			text
-	// 		});
-	// 		view.render();
-	// 	},
-	// 	getActiveTask: function() {
-	// 		let activeTasks = data.tasks;
-	// 		return activeTasks;
-	// 	},
-	// 	// removeTask: function(id) {
-	// 	// 	let elem = data.tasks.map(obj => obj.uid == id);
-	// 	// 	let posInArr = elem.indexOf(true);
-	// 	// 	data.tasks.splice(posInArr, 1);
-	// 	// 	localStorage.setItem("list_tasks",  JSON.stringify(data.tasks));
-	// 	// 	view.render();
-	// 	// }
-	// };
-
-	// let view = {
-	// 	init: function() {
-	// 		//remove task event handle
-	// 		this.taskList = $('.task-list');
- //            this.taskTemplate = $('script[data-template="tasks"]').html();
- //            $('.task-list').on('click', '.remove-task', function(e) {
- //                let taskId = $(this).parents('.task').attr('id');
- //                //let nodeNb = $(this).parents('.task').index();
- //                octopus.removeTask(taskId);
- //                return false;
- //            });
-
-	// 	},
-	// 	render: function() {
-	// 		this.taskList = $('.task-list');
-	// 		let taskList = this.taskList,
-	// 		taskTemplate = this.taskTemplate;
-	// 		taskList.html('');
-	// 		if (data.tasks){
-	// 			octopus.getActiveTask().map(function(task){
-	// 				let thisTemplate = taskTemplate.replace(/{{text}}/g, task.text)
-	// 												.replace(/{{id}}/g, task.uid);
-	// 				taskList.append(thisTemplate);
-	// 			});
-	// 		}
-	// 	}
-	// };
-	// view.init();
-	// view.render();
 
