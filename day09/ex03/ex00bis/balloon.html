@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Balloon</title>
+	<style>
+		.container{
+			margin: 0 auto;
+		}
+		.balloon{
+			margin: 0 auto;
+			background: red;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div  class="balloon" id="balloon">
+		</div>
+	</div>
+	<script>
+		let balloon = $("#balloon");
+		console.log(balloon);
+		balloon.click(inflate);
+		balloon.mouseout(getOut);
+
+		const colors = ["red", "green", "blue"];
+		let i = 0;
+		
+		function inflate() {
+			let balloon = $("#balloon")[0];
+			let ball_width = balloon.offsetWidth;
+			let ball_heigth = balloon.offsetHeight;
+			let step = 10;
+			if (ball_width >= 415)
+			{
+				balloon.style.width =  "200px";
+				balloon.style.height = "200px";
+				i = 2;
+			} else {
+				balloon.style.width = ball_width + step + "px";
+				balloon.style.height = ball_heigth + step + "px";
+			}
+			if (i == colors.length - 1)
+				i = -1;
+			balloon.style.background = colors[++i];
+		}
+
+		function getOut() {
+			let balloon = $("#balloon")[0];
+			let ball_width = balloon.offsetWidth;
+			let ball_heigth = balloon.offsetHeight;
+			if (ball_width > 200)
+			{
+				balloon.style.width = ball_width - 5 + "px";
+				balloon.style.height = ball_heigth - 5 + "px";
+			}
+			if (i == 0)
+				i = colors.length;
+			balloon.style.background = colors[--i];
+		}
+	</script>
+</body>
+</html>

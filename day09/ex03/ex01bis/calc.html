@@ -18,13 +18,14 @@
 			margin: 0 4px;
 		}
 	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="calc">
 			<h1>Super calculator</h1>
 			<input type="text" name="first">
-			<select id="op">
+			<select name="op" id="op">
 				<option value="plus">+</option>
 				<option value="deduct">-</option>
 				<option value="multiply">*</option>
@@ -36,24 +37,29 @@
 		</div>
 	</div>
 <script type="text/javascript">
+
 	window.setInterval(function () {
 	 	alert("Please, use me...");
-	}, 30000)
-	let first = document.getElementsByName("first")[0];
-	let second = document.getElementsByName("second")[0];
-	let submit = document.getElementsByName("submit")[0];
-	submit.addEventListener("click", result);
+	}, 30000);
+
 	function isInt(n) {
 	   return n % 1 === 0;
-	}
-	function result() {
-		let f_val = Number(first.value);
-		let s_val = Number(second.value);
-		let select = document.getElementById("op");
-	    selectedNode = select.options[select.selectedIndex].value;
+	};
+
+	$( "input[type=submit]" ).click(function() {
+		let first = $('input[name=first]').val();
+		let second = $('input[name=second]').val();
+		let f_val = Number(first);
+		let s_val = Number(second);
+		if (isNaN(f_val) || isNaN(s_val)){
+			alert("Error  :(");
+			console.log("Error  :(");
+			return (1);
+		}
+		let select = $('select[name=op]').val();
 	    if (f_val >= 0 && s_val >= 0 && isInt(f_val) && isInt(s_val)){
 			let result;
-	    	switch(selectedNode) {
+	    	switch(select) {
 			    case "plus":
 			        result = f_val + s_val;
 			        alert(result);
@@ -99,7 +105,7 @@
 			alert("Error  :(");
 			console.log("Error  :(");
 		}
-	}
+	});
 </script>
 </body>
 </html>

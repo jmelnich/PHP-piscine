@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Your tasks for today</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div class="flex-container-start">
+		<div class="wrapper">
+			<div class="whale_body">
+		    <div class="whale_mouth"></div>
+		    <div class="whale_eye"></div>
+			</div>
+			<div class="white_tail_1"></div>
+			<div class="white_tail_2"></div>
+			<div class="whale_tail_split_1"></div>
+			<div class="whale_tail_split_2"></div>
+		</div>
+
+	<div class="whale_fin"></div>
+		<h1>Whallie: your task helper</h1>
+	</div>
+	 <hr>
+	<div class="flex-container-between">
+		<div class="column-new">
+			<h2 class="center">Add new task</h2>
+			<div id="add" class="input-add center">
+				<input type="text" id="task-input" value=""/>
+				<i class="far fa-plus-square fa-2x add-task"></i>
+			</div>
+		</div>
+		<div class="column-list">
+		<h2 class="center">Your tasks</h2>
+		<ul id="sortable" class="task-list">
+		<script type="text/template" data-template="tasks">
+	        <li class="task" id="{{id}}">
+	            <div class="date">{{date}}</div>
+	            <div class="text"> {{text}}</div>
+	            <div class="task-controls">
+	            	<i class="far fa-trash-alt remove-task"></i>
+	            </div>
+	        </li>
+	    </script>
+		</ul>
+		</div>
+	</div>
+	<script src="todo.js"></script>
+	<script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+</body>
+</html>

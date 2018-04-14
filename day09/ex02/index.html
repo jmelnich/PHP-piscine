@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Your tasks for today</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+		  margin: 3em;
+		  background: #0f0c29;
+		  /* fallback for old browsers */
+		  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+		  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		  color: white;
+			}
+		.flex-container-between {
+		  display: flex;
+		  justify-content: space-between;
+		}
+
+		h1 {
+		  margin-bottom: 20px;
+		}
+		.column-new {
+			width: 30%;
+		}
+		.column-list {
+			width: 70%;
+		}
+
+		.task-list {
+			display: flex;
+			flex-direction: column;
+			align-items: center; }
+
+		.task {
+			width: 280px;
+			position: relative;
+			border: 1px solid white;
+			border-radius: 8px;
+			padding: 15px;
+			margin: 10px;
+			background-color: rgba(191, 233, 255, 0.1);
+	}
+	</style>
+</head>
+<body>
+	<h1>To do list</h1>
+	 <hr>
+	<div class="flex-container-between">
+		<div class="column-new">
+			<h2 class="center">Add new task</h2>
+			<div id="add" class="input-add center">
+				<!-- <input type="text" id="task-input" value=""/> -->
+				<button type="submit" onclick=openModal()>New</button>
+			</div>
+		</div>
+
+		<div id="ft_list" class="column-list">
+		<h2 class="center">Your tasks</h2>
+		<ul id="" class="task-list">
+		<script type="text/template" data-template="tasks">
+			<li class="task" id="{{id}}">
+				<div class="text"> {{text}}</div>
+				<div class="task-controls">
+					<i class="far fa-trash-alt remove-task"></i>
+				</div>
+			</li>
+		</script>
+		</ul>
+		</div>
+	</div>
+	<script src="todo.js"></script>
+</body>
+</html>
